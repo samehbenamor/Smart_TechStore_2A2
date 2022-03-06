@@ -1,0 +1,1839 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1137</width>
+    <height>813</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	font-family: Akrobat;
+	font-size: 26px;
+}
+
+QFrame{
+background:white;
+border-radius:15px;
+}
+
+QLabel{
+color:#29465B;
+font-size:40px;
+background:transparent;
+}
+
+QLineEdit{
+background:transparent;
+border:none;
+color:#717072;
+border-bottom:1px solid #717072;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1141</width>
+      <height>751</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="currentIndex">
+     <number>6</number>
+    </property>
+    <widget class="QWidget" name="Login">
+     <widget class="QPushButton" name="pushButton_9">
+      <property name="geometry">
+       <rect>
+        <x>-30</x>
+        <y>-30</y>
+        <width>1181</width>
+        <height>971</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#29465B;
+font-size:30px;
+border-radius:60px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_2">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>100</y>
+        <width>561</width>
+        <height>601</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="Loginhere_3">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>70</y>
+         <width>241</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>LOGIN HERE</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Login_3">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>490</y>
+         <width>431</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+background:#ECA966;
+font-size:30px;
+border-radius:30px;
+color:white;
+}
+
+QPushButton:hover{
+color:white;
+border-radius:30px;
+background:#29465B;
+font-size:30px;
+}</string>
+       </property>
+       <property name="text">
+        <string>LOGIN</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Username_3">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>200</y>
+         <width>431</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>Username</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Password_3">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>310</y>
+         <width>431</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+       <property name="placeholderText">
+        <string>Password</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QToolButton" name="Image">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>30</y>
+        <width>121</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QToolButton{
+background:white;
+border-radius:60px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>:/images/user.png</normaloff>:/images/user.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>200</width>
+        <height>200</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="choisir_">
+     <widget class="QPushButton" name="commandes">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>490</y>
+        <width>221</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#29465B;
+font-size:30px;
+border-radius:45px;
+color:white;
+}
+
+QPushButton:hover{
+color:#3794AB;
+border-radius:45px;
+background:white;
+font-size:30px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Commandes</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="produits">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>280</y>
+        <width>221</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#29465B;
+font-size:30px;
+border-radius:45px;
+color:white;
+}
+
+QPushButton:hover{
+color:#3794AB;
+border-radius:45px;
+background:white;
+font-size:30px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Produits</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="reparations">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>280</y>
+        <width>221</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#29465B;
+font-size:30px;
+border-radius:45px;
+color:white;
+}
+
+QPushButton:hover{
+color:#3794AB;
+border-radius:45px;
+background:white;
+font-size:30px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Reparations</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="employes">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>280</y>
+        <width>221</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#29465B;
+font-size:30px;
+border-radius:45px;
+color:white;
+}
+
+QPushButton:hover{
+color:#3794AB;
+border-radius:45px;
+background:white;
+font-size:30px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Employés</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="clients">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>490</y>
+        <width>221</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#29465B;
+font-size:30px;
+border-radius:45px;
+color:white;
+}
+
+QPushButton:hover{
+color:#3794AB;
+border-radius:45px;
+background:white;
+font-size:30px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Clients</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="BackgroundSavvys">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>1091</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#ECA966;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="background_1">
+      <property name="geometry">
+       <rect>
+        <x>-30</x>
+        <y>-20</y>
+        <width>1181</width>
+        <height>801</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+
+background:rgb(215, 216, 255);
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Savvys">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>30</y>
+        <width>301</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+font-size:90px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string>Savvys</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Retour_2">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>50</y>
+        <width>81</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#ECA966;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../../../Downloads/Images/icons8-undo-100.png</normaloff>../../../../Downloads/Images/icons8-undo-100.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>70</width>
+        <height>70</height>
+       </size>
+      </property>
+     </widget>
+     <zorder>background_1</zorder>
+     <zorder>commandes</zorder>
+     <zorder>produits</zorder>
+     <zorder>reparations</zorder>
+     <zorder>employes</zorder>
+     <zorder>clients</zorder>
+     <zorder>BackgroundSavvys</zorder>
+     <zorder>Savvys</zorder>
+     <zorder>Retour_2</zorder>
+    </widget>
+    <widget class="QWidget" name="reparation">
+     <widget class="QPushButton" name="pushButton_7">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>1091</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#ECA966;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Reparation">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>20</y>
+        <width>391</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+font-size:70px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string>Reparations</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Retour">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>50</y>
+        <width>81</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#ECA966;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../../../Downloads/Images/icons8-undo-100.png</normaloff>../../../../Downloads/Images/icons8-undo-100.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>70</width>
+        <height>70</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>190</y>
+        <width>1021</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:black;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>180</y>
+        <width>1021</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:white;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="geometry">
+       <rect>
+        <x>-30</x>
+        <y>-20</y>
+        <width>1181</width>
+        <height>801</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:rgb(215, 216, 255);
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ajouter1_btn">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>230</y>
+        <width>151</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#29465B;
+font-size:30px;
+border-radius:15px;
+color:white;
+}
+
+QPushButton:hover{
+color:#3794AB;
+border-radius:15px;
+background:white;
+font-size:30px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Ajouter</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="recherche_text">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>210</y>
+        <width>231</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>Recherche</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="supprimer_btn">
+      <property name="geometry">
+       <rect>
+        <x>880</x>
+        <y>340</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:rgb(215, 216, 255);
+font-size:25px;
+border-radius:15px;
+color:white;
+}
+
+QPushButton:hover{
+color:#3794AB;
+border-radius:15px;
+background:white;
+font-size:30px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Supprimer</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Statistiques_btn">
+      <property name="geometry">
+       <rect>
+        <x>840</x>
+        <y>230</y>
+        <width>161</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#29465B;
+font-size:30px;
+border-radius:15px;
+color:white;
+}
+
+QPushButton:hover{
+color:#3794AB;
+border-radius:15px;
+background:white;
+font-size:30px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Statistiques</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Rechercher_btn">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>200</y>
+        <width>81</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:white;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../../../Downloads/Images/icons8-search-58.png</normaloff>../../../../Downloads/Images/icons8-search-58.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>70</width>
+        <height>70</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QTableView" name="tableView">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>320</y>
+        <width>731</width>
+        <height>341</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background:rgb(215, 216, 255);
+color:black;
+font-size:20px;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="modifier_btn">
+      <property name="geometry">
+       <rect>
+        <x>880</x>
+        <y>400</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:rgb(215, 216, 255);
+font-size:25px;
+border-radius:15px;
+color:white;
+}
+
+QPushButton:hover{
+color:#3794AB;
+border-radius:15px;
+background:white;
+font-size:30px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Modifier</string>
+      </property>
+     </widget>
+     <zorder>pushButton_6</zorder>
+     <zorder>pushButton_7</zorder>
+     <zorder>Reparation</zorder>
+     <zorder>pushButton_3</zorder>
+     <zorder>pushButton_4</zorder>
+     <zorder>Retour</zorder>
+     <zorder>ajouter1_btn</zorder>
+     <zorder>recherche_text</zorder>
+     <zorder>supprimer_btn</zorder>
+     <zorder>Statistiques_btn</zorder>
+     <zorder>Rechercher_btn</zorder>
+     <zorder>tableView</zorder>
+     <zorder>modifier_btn</zorder>
+    </widget>
+    <widget class="QWidget" name="ajout_rep">
+     <widget class="QPushButton" name="pushButton_8">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>50</y>
+        <width>1021</width>
+        <height>671</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:black;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_10">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>30</y>
+        <width>1021</width>
+        <height>681</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:white;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_11">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>-30</y>
+        <width>1181</width>
+        <height>801</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:rgb(215, 216, 255);
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Retour_3">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>70</y>
+        <width>81</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:white;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../../../Downloads/Images/icons8-undo-100.png</normaloff>../../../../Downloads/Images/icons8-undo-100.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>70</width>
+        <height>70</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="id_em_txt">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>350</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>ID Employé</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="id_c_txt">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>440</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>ID Client</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="id_rep_txt">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>260</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>ID Reparation</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="les_id">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>170</y>
+        <width>151</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Les ID :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="dates">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>170</y>
+        <width>151</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Dates :</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="date_start_QDate">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>250</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background:rgb(215, 216, 255);
+font-size:25px;
+border-radius:15px;
+color:white;
+</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="date_end_QDate">
+      <property name="geometry">
+       <rect>
+        <x>910</x>
+        <y>250</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background:rgb(215, 216, 255);
+font-size:25px;
+border-radius:15px;
+color:white;
+</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="etat">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>340</y>
+        <width>101</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Etat :</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="telecharger_image_btn">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>450</y>
+        <width>261</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:rgb(215, 216, 255);
+font-size:25px;
+border-radius:15px;
+color:white;
+}
+
+QPushButton:hover{
+color:#29465B;
+border-radius:15px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Telecharger Images</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="debut">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>240</y>
+        <width>111</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:20px;</string>
+      </property>
+      <property name="text">
+       <string>Date debut :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="fin">
+      <property name="geometry">
+       <rect>
+        <x>810</x>
+        <y>240</y>
+        <width>91</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:20px;</string>
+      </property>
+      <property name="text">
+       <string>Date Fin :</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ajouter_btn">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>590</y>
+        <width>261</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#29465B;
+font-size:30px;
+border-radius:15px;
+color:white;
+}
+
+QPushButton:hover{
+color:#3794AB;
+border-radius:15px;
+background:white;
+font-size:30px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Ajouter</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="les_id_2">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>60</y>
+        <width>531</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:50px;
+color:#ECA966;</string>
+      </property>
+      <property name="text">
+       <string>Ajouter une Reparation</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="etat_txt">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>350</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>1 If Done else 0</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="image_rep_lol">
+      <property name="geometry">
+       <rect>
+        <x>800</x>
+        <y>450</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>oui/non</string>
+      </property>
+     </widget>
+     <zorder>pushButton_11</zorder>
+     <zorder>pushButton_8</zorder>
+     <zorder>pushButton_10</zorder>
+     <zorder>Retour_3</zorder>
+     <zorder>id_em_txt</zorder>
+     <zorder>id_c_txt</zorder>
+     <zorder>id_rep_txt</zorder>
+     <zorder>les_id</zorder>
+     <zorder>dates</zorder>
+     <zorder>date_start_QDate</zorder>
+     <zorder>date_end_QDate</zorder>
+     <zorder>etat</zorder>
+     <zorder>telecharger_image_btn</zorder>
+     <zorder>debut</zorder>
+     <zorder>fin</zorder>
+     <zorder>ajouter_btn</zorder>
+     <zorder>les_id_2</zorder>
+     <zorder>etat_txt</zorder>
+     <zorder>image_rep_lol</zorder>
+    </widget>
+    <widget class="QWidget" name="suppression_rep">
+     <widget class="QLineEdit" name="id_rep_suppr">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>400</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>ID Reparation</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_12">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>50</y>
+        <width>1021</width>
+        <height>681</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:white;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Retour_4">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>90</y>
+        <width>81</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:white;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../../../Downloads/Images/icons8-undo-100.png</normaloff>../../../../Downloads/Images/icons8-undo-100.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>70</width>
+        <height>70</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="supprimer_btn_2">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>610</y>
+        <width>261</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#29465B;
+font-size:30px;
+border-radius:15px;
+color:white;
+}
+
+QPushButton:hover{
+color:#3794AB;
+border-radius:15px;
+background:white;
+font-size:30px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Supprimer</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_13">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>70</y>
+        <width>1021</width>
+        <height>671</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:black;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="suppressionreparation">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>90</y>
+        <width>701</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:50px;
+color:#ECA966;</string>
+      </property>
+      <property name="text">
+       <string>Supprimer une Reparation</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_14">
+      <property name="geometry">
+       <rect>
+        <x>-30</x>
+        <y>-30</y>
+        <width>1181</width>
+        <height>801</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:rgb(215, 216, 255);
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="les_id_3">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>300</y>
+        <width>391</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:25px;</string>
+      </property>
+      <property name="text">
+       <string>Entrer ID Reparation a supprimer :</string>
+      </property>
+     </widget>
+     <zorder>pushButton_14</zorder>
+     <zorder>pushButton_13</zorder>
+     <zorder>pushButton_12</zorder>
+     <zorder>Retour_4</zorder>
+     <zorder>supprimer_btn_2</zorder>
+     <zorder>suppressionreparation</zorder>
+     <zorder>id_rep_suppr</zorder>
+     <zorder>les_id_3</zorder>
+    </widget>
+    <widget class="QWidget" name="avant_modifier">
+     <widget class="QPushButton" name="pushButton_33">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>40</y>
+        <width>1021</width>
+        <height>681</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:white;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="aller_modifier">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>600</y>
+        <width>261</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#29465B;
+font-size:30px;
+border-radius:15px;
+color:white;
+}
+
+QPushButton:hover{
+color:#3794AB;
+border-radius:15px;
+background:white;
+font-size:30px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Aller Modifier</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="id_rep_modifier">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>390</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>ID Reparation</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Retour_11">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>80</y>
+        <width>81</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:white;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../../../Downloads/Images/icons8-undo-100.png</normaloff>../../../../Downloads/Images/icons8-undo-100.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>70</width>
+        <height>70</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_32">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>60</y>
+        <width>1021</width>
+        <height>671</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:black;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_31">
+      <property name="geometry">
+       <rect>
+        <x>-30</x>
+        <y>-40</y>
+        <width>1181</width>
+        <height>801</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:rgb(215, 216, 255);
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entrer_id_txt">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>290</y>
+        <width>391</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:25px;</string>
+      </property>
+      <property name="text">
+       <string>Entrer ID Reparation a modifier :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="modifier_text">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>80</y>
+        <width>701</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:50px;
+color:#ECA966;</string>
+      </property>
+      <property name="text">
+       <string>Modifier une Reparation</string>
+      </property>
+     </widget>
+     <zorder>pushButton_31</zorder>
+     <zorder>pushButton_32</zorder>
+     <zorder>pushButton_33</zorder>
+     <zorder>aller_modifier</zorder>
+     <zorder>id_rep_modifier</zorder>
+     <zorder>Retour_11</zorder>
+     <zorder>entrer_id_txt</zorder>
+     <zorder>modifier_text</zorder>
+    </widget>
+    <widget class="QWidget" name="modifier_rep">
+     <widget class="QDateEdit" name="date_start_QDate_3">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>260</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background:rgb(215, 216, 255);
+font-size:25px;
+border-radius:15px;
+color:white;
+</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_25">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>60</y>
+        <width>1021</width>
+        <height>671</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:black;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Retour_9">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>80</y>
+        <width>81</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:white;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../../../Downloads/Images/icons8-undo-100.png</normaloff>../../../../Downloads/Images/icons8-undo-100.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>70</width>
+        <height>70</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="id_em_txt_3">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>300</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>ID Employé</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="telecharger_image_btn_3">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>460</y>
+        <width>261</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:rgb(215, 216, 255);
+font-size:25px;
+border-radius:15px;
+color:white;
+}
+
+QPushButton:hover{
+color:#29465B;
+border-radius:15px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Telecharger Images</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="image_rep_lol_3">
+      <property name="geometry">
+       <rect>
+        <x>810</x>
+        <y>460</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>oui/non</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="debut_3">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>250</y>
+        <width>111</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:20px;</string>
+      </property>
+      <property name="text">
+       <string>Date debut :</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="id_c_txt_3">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>390</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>ID Client</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="etat_txt_3">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>360</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>1 If Done else 0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="les_id_7">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>180</y>
+        <width>151</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Les ID :</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="modifier_btn_3">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>600</y>
+        <width>261</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#29465B;
+font-size:30px;
+border-radius:15px;
+color:white;
+}
+
+QPushButton:hover{
+color:#3794AB;
+border-radius:15px;
+background:white;
+font-size:30px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Modifier</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="dates_3">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>180</y>
+        <width>151</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Dates :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="etat_3">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>350</y>
+        <width>101</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Etat :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="fin_3">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>250</y>
+        <width>91</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:20px;</string>
+      </property>
+      <property name="text">
+       <string>Date Fin :</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_26">
+      <property name="geometry">
+       <rect>
+        <x>-20</x>
+        <y>-30</y>
+        <width>1181</width>
+        <height>801</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:rgb(215, 216, 255);
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Modifier_text">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>70</y>
+        <width>541</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:50px;
+color:#ECA966;</string>
+      </property>
+      <property name="text">
+       <string>Modifier une Reparation</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_27">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>40</y>
+        <width>1021</width>
+        <height>681</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:white;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="date_end_QDate_3">
+      <property name="geometry">
+       <rect>
+        <x>920</x>
+        <y>260</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background:rgb(215, 216, 255);
+font-size:25px;
+border-radius:15px;
+color:white;
+</string>
+      </property>
+     </widget>
+     <zorder>pushButton_26</zorder>
+     <zorder>pushButton_25</zorder>
+     <zorder>pushButton_27</zorder>
+     <zorder>date_start_QDate_3</zorder>
+     <zorder>Retour_9</zorder>
+     <zorder>id_em_txt_3</zorder>
+     <zorder>telecharger_image_btn_3</zorder>
+     <zorder>image_rep_lol_3</zorder>
+     <zorder>debut_3</zorder>
+     <zorder>id_c_txt_3</zorder>
+     <zorder>etat_txt_3</zorder>
+     <zorder>les_id_7</zorder>
+     <zorder>modifier_btn_3</zorder>
+     <zorder>dates_3</zorder>
+     <zorder>etat_3</zorder>
+     <zorder>fin_3</zorder>
+     <zorder>Modifier_text</zorder>
+     <zorder>date_end_QDate_3</zorder>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1137</width>
+     <height>36</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
