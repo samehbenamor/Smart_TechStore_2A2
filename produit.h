@@ -3,21 +3,20 @@
 #include <QString>
 #include <QSqlQuery>
 #include <QSqlQueryModel>
-
 class produit
 {
-    QString nom_pr, qr_code, image, description, date_impo;
-    float prix;
-    int id_pr, stock;
+
+    QString nom, qr_code, image, description, date_impo;
+    int id_pr, stock, prix;
 
 public:
     //Constructeurs
         produit() {}
-        produit(int, QString, float, QString, int, QString, QString, QString);
+        produit(int, QString, int, QString, int, QString, QString,QString);
 
     //Getters
         //Strings
-        QString getNom_pr(){return nom_pr;}
+        QString getNom_pr(){return nom;}
         QString getDesc(){return description;}
         QString getQr(){return qr_code;}
         QString getImage(){return image;}
@@ -26,10 +25,10 @@ public:
         int getIdPr(){return id_pr;}
         int getStock(){return stock;}
         //Float
-        float getPrix(){return prix;}
+        int getPrix(){return prix;}
     //Setters
         //Strings
-        void setNom_pr(QString nom){nom_pr = nom;}
+        void setNom_pr(QString nom2){nom = nom2;}
         void setQR(QString qr){qr_code = qr;}
         void setImage(QString im){image = im;}
         void setDesc(QString desc){description = desc;}
@@ -38,13 +37,13 @@ public:
         void setIdPr(int id){id_pr = id;}
         void setStock(int st){stock = st;}
         //Float
-        void setPrix(float pr){prix = pr;}
+        void setPrix(int pr){prix = pr;}
     //Fonctionalités de Base relatives à l'entite Produit
         bool ajouterProduit();
         QSqlQueryModel * afficher();
         bool supprimerProduit(int);
-
-
+        QSqlQuery rechercherProduit(int);
+        bool modifierProduit();
 };
 
 #endif // PRODUIT_H

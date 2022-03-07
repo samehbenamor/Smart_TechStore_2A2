@@ -34,7 +34,7 @@ private slots:
 
     void on_supprimer_btn_clicked();
 
-private:
+    private:
     Ui::MainWindow *ui;
     produit pro;
 

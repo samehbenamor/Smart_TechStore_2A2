@@ -58,14 +58,12 @@ bool produit::supprimerProduit(int id) {
 }
 QSqlQuery produit::rechercherProduit(int i)
 {
-
     QSqlQuery query;
     QString Id = QString::number(i);
     query.prepare("select * from produit where id_pr=:id_pr");
     query.bindValue(":id_pr",Id);
     query.exec();
     return   query;
-
 }
 
 bool produit::modifierProduit(){
