@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1131</width>
-    <height>798</height>
+    <width>1212</width>
+    <height>783</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -43,7 +43,7 @@ border-bottom:1px solid #717072;
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>1131</width>
+      <width>1201</width>
       <height>731</height>
      </rect>
     </property>
@@ -51,7 +51,7 @@ border-bottom:1px solid #717072;
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QPushButton" name="commandes">
@@ -330,10 +330,10 @@ color:white;
      <widget class="QPushButton" name="pushButton_6">
       <property name="geometry">
        <rect>
-        <x>-20</x>
-        <y>-20</y>
+        <x>0</x>
+        <y>0</y>
         <width>1181</width>
-        <height>761</height>
+        <height>801</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -351,37 +351,169 @@ color:white;
      <widget class="QTableView" name="affichecommandes">
       <property name="geometry">
        <rect>
-        <x>90</x>
-        <y>220</y>
-        <width>701</width>
-        <height>411</height>
+        <x>60</x>
+        <y>310</y>
+        <width>891</width>
+        <height>301</height>
        </rect>
       </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px;</string>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>130</number>
+      </attribute>
      </widget>
      <widget class="QPushButton" name="pushButton_2">
       <property name="geometry">
        <rect>
-        <x>830</x>
-        <y>250</y>
-        <width>171</width>
+        <x>880</x>
+        <y>430</y>
+        <width>161</width>
         <height>41</height>
        </rect>
       </property>
       <property name="text">
-       <string>n7eb nfasa5</string>
+       <string>Supprimer</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_8">
+     <widget class="QPushButton" name="modifercommande">
       <property name="geometry">
        <rect>
-        <x>850</x>
-        <y>350</y>
-        <width>121</width>
+        <x>880</x>
+        <y>360</y>
+        <width>161</width>
         <height>41</height>
        </rect>
       </property>
       <property name="text">
-       <string>modifi</string>
+       <string>Modifier</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ajouterco">
+      <property name="geometry">
+       <rect>
+        <x>880</x>
+        <y>290</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ajouter</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="statistiquebutton">
+      <property name="geometry">
+       <rect>
+        <x>880</x>
+        <y>500</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Statistique</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pdf">
+      <property name="geometry">
+       <rect>
+        <x>880</x>
+        <y>570</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PDF</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="recherche">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>190</y>
+        <width>391</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="RechercherParVille">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>230</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>VILLE</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="RechercherParClient">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>230</y>
+        <width>83</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CLIENT</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="RechercheParId">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>230</y>
+        <width>83</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ID</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="rechercher">
+      <property name="geometry">
+       <rect>
+        <x>750</x>
+        <y>190</y>
+        <width>61</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:none;
+font-size:70px;
+border-radius:60px;
+color:white;
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../recherche.png</normaloff>../recherche.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>70</width>
+        <height>70</height>
+       </size>
       </property>
      </widget>
      <zorder>pushButton_6</zorder>
@@ -391,15 +523,23 @@ color:white;
      <zorder>pushButton_4</zorder>
      <zorder>affichecommandes</zorder>
      <zorder>pushButton_2</zorder>
-     <zorder>pushButton_8</zorder>
+     <zorder>modifercommande</zorder>
+     <zorder>ajouterco</zorder>
+     <zorder>statistiquebutton</zorder>
+     <zorder>pdf</zorder>
+     <zorder>recherche</zorder>
+     <zorder>RechercherParVille</zorder>
+     <zorder>RechercherParClient</zorder>
+     <zorder>RechercheParId</zorder>
+     <zorder>rechercher</zorder>
     </widget>
     <widget class="QWidget" name="page_3">
      <widget class="QPushButton" name="background">
       <property name="geometry">
        <rect>
-        <x>-50</x>
-        <y>0</y>
-        <width>1181</width>
+        <x>-30</x>
+        <y>-10</y>
+        <width>1501</width>
         <height>761</height>
        </rect>
       </property>
@@ -439,8 +579,8 @@ color:white;
      <widget class="QDateEdit" name="dateCom">
       <property name="geometry">
        <rect>
-        <x>340</x>
-        <y>380</y>
+        <x>320</x>
+        <y>420</y>
         <width>181</width>
         <height>31</height>
        </rect>
@@ -465,8 +605,8 @@ color:white;
      <widget class="QLabel" name="label_22">
       <property name="geometry">
        <rect>
-        <x>110</x>
-        <y>270</y>
+        <x>80</x>
+        <y>330</y>
         <width>161</width>
         <height>31</height>
        </rect>
@@ -478,8 +618,8 @@ color:white;
      <widget class="QLabel" name="label_23">
       <property name="geometry">
        <rect>
-        <x>90</x>
-        <y>380</y>
+        <x>70</x>
+        <y>420</y>
         <width>161</width>
         <height>31</height>
        </rect>
@@ -492,7 +632,7 @@ color:white;
       <property name="geometry">
        <rect>
         <x>100</x>
-        <y>450</y>
+        <y>510</y>
         <width>161</width>
         <height>31</height>
        </rect>
@@ -504,8 +644,8 @@ color:white;
      <widget class="QPushButton" name="ajouteCom">
       <property name="geometry">
        <rect>
-        <x>390</x>
-        <y>580</y>
+        <x>380</x>
+        <y>600</y>
         <width>141</width>
         <height>31</height>
        </rect>
@@ -517,8 +657,8 @@ color:white;
      <widget class="QPushButton" name="Anuller">
       <property name="geometry">
        <rect>
-        <x>570</x>
-        <y>580</y>
+        <x>590</x>
+        <y>600</y>
         <width>141</width>
         <height>31</height>
        </rect>
@@ -530,8 +670,8 @@ color:white;
      <widget class="QLineEdit" name="localisation">
       <property name="geometry">
        <rect>
-        <x>360</x>
-        <y>270</y>
+        <x>350</x>
+        <y>340</y>
         <width>113</width>
         <height>20</height>
        </rect>
@@ -540,14 +680,152 @@ color:white;
      <widget class="QLineEdit" name="id_co">
       <property name="geometry">
        <rect>
-        <x>360</x>
-        <y>460</y>
+        <x>370</x>
+        <y>510</y>
         <width>113</width>
         <height>20</height>
        </rect>
       </property>
       <property name="placeholderText">
        <string>bonk</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="villee">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>250</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Bizerte</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Tunis</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Nabel</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ben Arous</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Tataouine</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gébes</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gafsa</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Jandouba</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Beja</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mednine</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Zaghouan</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Sousse</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Monastir</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kebili </string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Tozeur</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Sfax</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ariana</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Siliana</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kef</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mannouba</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mahdia</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kasserine</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Sidi Bouzid</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="ville">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>260</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ville</string>
       </property>
      </widget>
     </widget>
@@ -579,7 +857,234 @@ color:white;
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_5"/>
+    <widget class="QWidget" name="page_5">
+     <widget class="QTableView" name="stats">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>230</y>
+        <width>641</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 30px;</string>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>140</number>
+      </attribute>
+     </widget>
+     <widget class="QPushButton" name="rfegh">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>1091</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#ECA966;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string>Statistique</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="zrgzrg">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>220</y>
+        <width>1021</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:white;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="zrgrzg">
+      <property name="geometry">
+       <rect>
+        <x>-20</x>
+        <y>-30</y>
+        <width>1601</width>
+        <height>761</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#BDD3DA;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="StatisqueQP">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>750</x>
+        <y>270</y>
+        <width>291</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Akrobat</family>
+        <pointsize>-1</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 23px;</string>
+      </property>
+      <property name="text">
+       <string>Les produis les plus comandes</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="StatisqueClient">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>750</x>
+        <y>380</y>
+        <width>291</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Akrobat</family>
+        <pointsize>-1</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 23px;</string>
+      </property>
+      <property name="text">
+       <string>Les client qui commande le plus</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="StatisquePlace">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>750</x>
+        <y>480</y>
+        <width>291</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Akrobat</family>
+        <pointsize>-1</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 23px;</string>
+      </property>
+      <property name="text">
+       <string>Les villes qui commande le plus</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="retourStats">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>40</y>
+        <width>101</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#ECA966;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../274694383_519374196252756_5427749818785905607_n.png</normaloff>../274694383_519374196252756_5427749818785905607_n.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+     </widget>
+     <zorder>zrgrzg</zorder>
+     <zorder>rfegh</zorder>
+     <zorder>zrgzrg</zorder>
+     <zorder>stats</zorder>
+     <zorder>StatisqueQP</zorder>
+     <zorder>StatisqueClient</zorder>
+     <zorder>StatisquePlace</zorder>
+     <zorder>retourStats</zorder>
+    </widget>
     <widget class="QWidget" name="page_6">
      <widget class="QLineEdit" name="editcom">
       <property name="geometry">
@@ -609,16 +1114,6 @@ color:white;
      </widget>
     </widget>
     <widget class="QWidget" name="page_7">
-     <widget class="QLineEdit" name="idcom">
-      <property name="geometry">
-       <rect>
-        <x>390</x>
-        <y>160</y>
-        <width>351</width>
-        <height>41</height>
-       </rect>
-      </property>
-     </widget>
      <widget class="QLineEdit" name="localisationM">
       <property name="geometry">
        <rect>
@@ -672,6 +1167,139 @@ color:white;
        <string>sayé</string>
       </property>
      </widget>
+     <widget class="QSpinBox" name="idcom">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>190</y>
+        <width>151</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_8">
+     <widget class="QPushButton" name="rfegh_5">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>30</y>
+        <width>1091</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#ECA966;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string>Recherche</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="retourStats_5">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>50</y>
+        <width>101</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#ECA966;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../274694383_519374196252756_5427749818785905607_n.png</normaloff>../274694383_519374196252756_5427749818785905607_n.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="zrgrzg_5">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>-20</y>
+        <width>1181</width>
+        <height>761</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#BDD3DA;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="rechercheN">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>310</y>
+        <width>231</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>recherche par nom</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="rechercheid">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>310</y>
+        <width>181</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>recherche par id</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="rechercheidc">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>310</y>
+        <width>241</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Recherche par id client</string>
+      </property>
+     </widget>
+     <zorder>zrgrzg_5</zorder>
+     <zorder>rfegh_5</zorder>
+     <zorder>retourStats_5</zorder>
+     <zorder>rechercheN</zorder>
+     <zorder>rechercheid</zorder>
+     <zorder>rechercheidc</zorder>
     </widget>
    </widget>
   </widget>
@@ -680,7 +1308,7 @@ color:white;
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1131</width>
+     <width>1212</width>
      <height>39</height>
     </rect>
    </property>

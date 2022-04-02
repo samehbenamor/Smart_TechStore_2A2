@@ -30,6 +30,34 @@ private slots:
 
     void on_pushButton_15_clicked();
 
+    void on_pushButton_9_clicked();
+
+    void on_Anuller_clicked();
+
+    void on_ajouterco_clicked();
+
+    void on_statistiquebutton_clicked();
+
+    void on_modifercommande_clicked();
+
+    void on_retourStats_clicked();
+
+    void on_StatisqueQP_clicked();
+
+    void on_StatisqueClient_clicked();
+
+    void on_StatisquePlace_clicked();
+
+    void on_supprimer_clicked();
+
+    void on_rechercheN_clicked();
+
+    void on_rechercher_clicked();
+
+    void on_pdf_clicked();
+
+    void on_affichecommandes_activated(const QModelIndex &index);
+
 private:
     Ui::MainWindow *ui;
     Commandes com;

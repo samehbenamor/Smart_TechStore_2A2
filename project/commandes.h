@@ -11,19 +11,22 @@ class Commandes
     int id_co,etatc,id_c;
     QString datec;
     QString localisation;
+    QString ville;
 public:
     // functions
     Commandes(){};
-    Commandes(int,QString,QString,int,int);
+    Commandes(int,QString,QString,int,int,QString);
    bool AjouterCommandes();
    bool SupprimerCommandes(int);
    QSqlQueryModel * afficher();
    bool modifierCommandes(int,QString,QString,int,int);
-   void StatsCommandes(int);
+   QSqlQueryModel * StatsCommandes(int);
    bool coupon();
    void facture();
    QSqlQuery rechercherCommandes(int);
+   QSqlQuery rechercherCommandesByAdresse(QString);
    bool rechercherClients(int);
+   QSqlQueryModel * Recherche(int,QString);
    //getters
    int getId_co(){return this->id_co;};
    int getId_C(){return this->id_c;};
