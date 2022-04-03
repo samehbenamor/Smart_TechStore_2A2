@@ -20,6 +20,8 @@ public:
     //CONSTRUCTEURS
     Reparation(){};
     Reparation(int id_rep,int etat,QString image_rep,QString date_end,QString date_start,int id_em,int id_c);
+    Reparation(int id_rep,int etat,QString date_end,QString date_start,int id_em,int id_c);
+    Reparation(int id_rep,QString image_rep);
 
 
 
@@ -61,6 +63,12 @@ public:
     bool rechercherEmploye(int e);
     bool rechercherReparation(int r);
     QSqlQuery rechercherReparation2(int i);
+    QSqlQueryModel * rechercher(int id_rep);
+    QSqlQueryModel * statistic1();
+    QSqlQueryModel * statistic2();
+    QSqlQueryModel * statistic3();
+    QSqlQueryModel * Recherche(int k,QString type);
+    bool ajouterimage(int id_rep,QString image_rep);
 
 
 
