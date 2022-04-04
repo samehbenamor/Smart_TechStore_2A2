@@ -19,13 +19,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     client.cpp \
     connection.cpp \
+    exportexcel.cpp \
+    faciliter.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    notif.cpp
 
 HEADERS += \
     client.h \
     connection.h \
-    mainwindow.h
+    exportexcel.h \
+    faciliter.h \
+    mainwindow.h \
+    notif.h
 
 FORMS += \
     mainwindow.ui

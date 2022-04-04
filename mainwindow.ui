@@ -51,7 +51,7 @@ border-bottom:1px solid #717072;
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="Login">
      <widget class="QPushButton" name="pushButton_9">
@@ -444,7 +444,7 @@ color:white;
      <zorder>Savvys</zorder>
      <zorder>Retour_2</zorder>
     </widget>
-    <widget class="QWidget" name="produit">
+    <widget class="QWidget" name="clients_2">
      <widget class="QPushButton" name="pushButton_7">
       <property name="geometry">
        <rect>
@@ -607,11 +607,11 @@ font-size:30px;
        <string>Ajouter</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="recherche_text">
+     <widget class="QLineEdit" name="recherche_cl">
       <property name="geometry">
        <rect>
-        <x>410</x>
-        <y>210</y>
+        <x>360</x>
+        <y>230</y>
         <width>231</width>
         <height>51</height>
        </rect>
@@ -623,9 +623,9 @@ font-size:30px;
      <widget class="QPushButton" name="supprimer_btn">
       <property name="geometry">
        <rect>
-        <x>880</x>
+        <x>860</x>
         <y>340</y>
-        <width>141</width>
+        <width>181</width>
         <height>41</height>
        </rect>
       </property>
@@ -719,15 +719,18 @@ color:white;
       <property name="styleSheet">
        <string notr="true">background:rgb(215, 216, 255);
 color:black;
-font-size:20px;</string>
+font-size:10px;</string>
       </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>120</number>
+      </attribute>
      </widget>
      <widget class="QPushButton" name="modifier_btn">
       <property name="geometry">
        <rect>
-        <x>880</x>
+        <x>860</x>
         <y>400</y>
-        <width>141</width>
+        <width>181</width>
         <height>41</height>
        </rect>
       </property>
@@ -750,6 +753,170 @@ font-size:30px;
        <string>Modifier</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="recherchecl">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>230</y>
+        <width>171</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#29465B;
+font-size:30px;
+border-radius:15px;
+color:white;
+}
+
+QPushButton:hover{
+color:#3794AB;
+border-radius:15px;
+background:white;
+font-size:30px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Recherche</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="PM">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>460</y>
+        <width>181</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:rgb(215, 216, 255);
+font-size:25px;
+border-radius:15px;
+color:white;
+}
+
+QPushButton:hover{
+color:#3794AB;
+border-radius:15px;
+background:white;
+font-size:20px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Points merci</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Excelexport">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>530</y>
+        <width>191</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:rgb(215, 216, 255);
+font-size:25px;
+border-radius:15px;
+color:white;
+}
+
+QPushButton:hover{
+color:#3794AB;
+border-radius:15px;
+background:white;
+font-size:20px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Export en excel</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="prixaexport">
+      <property name="geometry">
+       <rect>
+        <x>870</x>
+        <y>580</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>Prix a faciliter</string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="faciliter">
+      <property name="geometry">
+       <rect>
+        <x>1080</x>
+        <y>700</y>
+        <width>20</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="changelanguage">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>70</y>
+        <width>71</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#29465B;
+font-size:30px;
+border-radius:15px;
+color:white;
+}
+
+QPushButton:hover{
+color:#3794AB;
+border-radius:15px;
+background:white;
+font-size:30px;
+}</string>
+      </property>
+      <property name="text">
+       <string>EN</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="changefr">
+      <property name="geometry">
+       <rect>
+        <x>940</x>
+        <y>70</y>
+        <width>71</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#29465B;
+font-size:30px;
+border-radius:15px;
+color:white;
+}
+
+QPushButton:hover{
+color:#3794AB;
+border-radius:15px;
+background:white;
+font-size:30px;
+}</string>
+      </property>
+      <property name="text">
+       <string>FR</string>
+      </property>
+     </widget>
+     <zorder>faciliter</zorder>
      <zorder>pushButton_6</zorder>
      <zorder>pushButton_7</zorder>
      <zorder>Produits</zorder>
@@ -757,12 +924,18 @@ font-size:30px;
      <zorder>pushButton_4</zorder>
      <zorder>Retour</zorder>
      <zorder>ajouter1_btn</zorder>
-     <zorder>recherche_text</zorder>
+     <zorder>recherche_cl</zorder>
      <zorder>supprimer_btn</zorder>
      <zorder>Statistiques_btn</zorder>
      <zorder>Rechercher_btn</zorder>
      <zorder>tableView</zorder>
      <zorder>modifier_btn</zorder>
+     <zorder>recherchecl</zorder>
+     <zorder>PM</zorder>
+     <zorder>Excelexport</zorder>
+     <zorder>prixaexport</zorder>
+     <zorder>changelanguage</zorder>
+     <zorder>changefr</zorder>
     </widget>
     <widget class="QWidget" name="ajout_pr">
      <widget class="QPushButton" name="pushButton_8">
@@ -959,9 +1132,9 @@ color:#ECA966;</string>
      <widget class="QLabel" name="label">
       <property name="geometry">
        <rect>
-        <x>410</x>
+        <x>380</x>
         <y>340</y>
-        <width>301</width>
+        <width>391</width>
         <height>51</height>
        </rect>
       </property>
@@ -1157,7 +1330,7 @@ color:white;
        <rect>
         <x>280</x>
         <y>90</y>
-        <width>701</width>
+        <width>451</width>
         <height>61</height>
        </rect>
       </property>
@@ -1515,7 +1688,7 @@ color:white;
       <property name="geometry">
        <rect>
         <x>470</x>
-        <y>600</y>
+        <y>630</y>
         <width>261</width>
         <height>81</height>
        </rect>
@@ -1544,7 +1717,7 @@ font-size:30px;
        <rect>
         <x>490</x>
         <y>220</y>
-        <width>151</width>
+        <width>411</width>
         <height>51</height>
        </rect>
       </property>
@@ -1557,7 +1730,7 @@ font-size:30px;
        <rect>
         <x>490</x>
         <y>320</y>
-        <width>101</width>
+        <width>471</width>
         <height>51</height>
        </rect>
       </property>
@@ -1629,12 +1802,35 @@ color:white;
        <rect>
         <x>490</x>
         <y>430</y>
-        <width>181</width>
+        <width>491</width>
         <height>51</height>
        </rect>
       </property>
       <property name="text">
        <string>Address:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>550</y>
+        <width>231</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Points merci: </string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="PMERCI">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>570</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
       </property>
      </widget>
      <zorder>pushButton_26</zorder>
@@ -1651,6 +1847,620 @@ color:white;
      <zorder>etat_3</zorder>
      <zorder>Modifier_text</zorder>
      <zorder>label_2</zorder>
+     <zorder>label_11</zorder>
+     <zorder>PMERCI</zorder>
+    </widget>
+    <widget class="QWidget" name="stats_cli">
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>280</y>
+        <width>47</width>
+        <height>14</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="modifier_text_2">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>80</y>
+        <width>511</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:50px;
+color:#ECA966;</string>
+      </property>
+      <property name="text">
+       <string>Statistiques des clients</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_34">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>50</y>
+        <width>1021</width>
+        <height>671</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:black;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Retour_5">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>590</y>
+        <width>261</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#29465B;
+font-size:30px;
+border-radius:15px;
+color:white;
+}
+
+QPushButton:hover{
+color:#3794AB;
+border-radius:15px;
+background:white;
+font-size:30px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Retour</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="nbrclient">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>270</y>
+        <width>81</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nbr</string>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="placeholderText">
+       <string>ID client</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_35">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>30</y>
+        <width>1021</width>
+        <height>681</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:white;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Retour_12">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>70</y>
+        <width>81</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:white;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../../../Downloads/Images/icons8-undo-100.png</normaloff>../../../../Downloads/Images/icons8-undo-100.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>70</width>
+        <height>70</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entrer_id_txt_2">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>220</y>
+        <width>441</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:25px;</string>
+      </property>
+      <property name="text">
+       <string>Nombres totale des clients</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_36">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>-50</y>
+        <width>1181</width>
+        <height>801</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:rgb(215, 216, 255);
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>330</y>
+        <width>241</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:25px;</string>
+      </property>
+      <property name="text">
+       <string>Derniere client ajouté</string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="clidernier">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>390</y>
+        <width>631</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background:rgb(215, 216, 255);
+color:black;
+font-size:20px;</string>
+      </property>
+     </widget>
+     <zorder>pushButton_36</zorder>
+     <zorder>label_3</zorder>
+     <zorder>pushButton_34</zorder>
+     <zorder>pushButton_35</zorder>
+     <zorder>Retour_12</zorder>
+     <zorder>entrer_id_txt_2</zorder>
+     <zorder>modifier_text_2</zorder>
+     <zorder>nbrclient</zorder>
+     <zorder>Retour_5</zorder>
+     <zorder>label_8</zorder>
+     <zorder>clidernier</zorder>
+    </widget>
+    <widget class="QWidget" name="Pointsmerci">
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>480</y>
+        <width>47</width>
+        <height>14</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entrer_id_txt_3">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>350</y>
+        <width>241</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:25px;</string>
+      </property>
+      <property name="text">
+       <string>Points merci a ajouté</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Retour_pms">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>580</y>
+        <width>261</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#29465B;
+font-size:30px;
+border-radius:15px;
+color:white;
+}
+
+QPushButton:hover{
+color:#3794AB;
+border-radius:15px;
+background:white;
+font-size:30px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Retour</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_37">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>60</y>
+        <width>1021</width>
+        <height>671</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:black;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_38">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>40</y>
+        <width>1021</width>
+        <height>681</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:white;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_39">
+      <property name="geometry">
+       <rect>
+        <x>-50</x>
+        <y>-40</y>
+        <width>1181</width>
+        <height>801</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:rgb(215, 216, 255);
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Retour_13">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>80</y>
+        <width>81</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:white;
+font-size:70px;
+border-radius:60px;
+color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../../../Downloads/Images/icons8-undo-100.png</normaloff>../../../../Downloads/Images/icons8-undo-100.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>70</width>
+        <height>70</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>450</y>
+        <width>301</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:25px;</string>
+      </property>
+      <property name="text">
+       <string>Points merci a consommer</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="pm_management">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>90</y>
+        <width>451</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:50px;
+color:#ECA966;</string>
+      </property>
+      <property name="text">
+       <string>Points merci </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>240</y>
+        <width>71</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:25px;</string>
+      </property>
+      <property name="text">
+       <string>Client</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="PrenomCli">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>250</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="NomCli">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>250</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="merciajoute">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>410</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="MerciConsommer">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>500</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>170</y>
+        <width>41</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Id:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="idclpm">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>180</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Ajouter">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>400</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#29465B;
+font-size:30px;
+border-radius:15px;
+color:white;
+}
+
+QPushButton:hover{
+color:#3794AB;
+border-radius:15px;
+background:white;
+font-size:30px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Ajouter!</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Consommer">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>490</y>
+        <width>171</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background:#29465B;
+font-size:30px;
+border-radius:15px;
+color:white;
+}
+
+QPushButton:hover{
+color:#3794AB;
+border-radius:15px;
+background:white;
+font-size:30px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Consommer!</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="messageajout">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>400</y>
+        <width>191</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: red;
+font-size:10px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="messageecons">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>490</y>
+        <width>221</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: red;
+font-size:10px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <zorder>label_6</zorder>
+     <zorder>pushButton_39</zorder>
+     <zorder>pushButton_37</zorder>
+     <zorder>pushButton_38</zorder>
+     <zorder>Retour_13</zorder>
+     <zorder>label_9</zorder>
+     <zorder>pm_management</zorder>
+     <zorder>Retour_pms</zorder>
+     <zorder>entrer_id_txt_3</zorder>
+     <zorder>label_7</zorder>
+     <zorder>PrenomCli</zorder>
+     <zorder>NomCli</zorder>
+     <zorder>merciajoute</zorder>
+     <zorder>MerciConsommer</zorder>
+     <zorder>label_12</zorder>
+     <zorder>idclpm</zorder>
+     <zorder>Ajouter</zorder>
+     <zorder>Consommer</zorder>
+     <zorder>messageajout</zorder>
+     <zorder>messageecons</zorder>
     </widget>
    </widget>
   </widget>
@@ -1660,7 +2470,7 @@ color:white;
      <x>0</x>
      <y>0</y>
      <width>1137</width>
-     <height>35</height>
+     <height>36</height>
     </rect>
    </property>
   </widget>
