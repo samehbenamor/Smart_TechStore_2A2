@@ -17,7 +17,10 @@ public:
     Commandes(){};
     Commandes(int,QString,QString,int,int,QString);
    bool AjouterCommandes();
+   bool ajoutecontenir(int,int,int,float);
    bool SupprimerCommandes(int);
+   float getPrice(int);
+   int getCoupon(QString);
    QSqlQueryModel * afficher();
    bool modifierCommandes(int,QString,QString,int,int);
    QSqlQueryModel * StatsCommandes(int);

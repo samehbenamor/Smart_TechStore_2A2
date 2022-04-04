@@ -14,11 +14,12 @@ bool Commandes::AjouterCommandes()
 {
     QSqlQuery query;
     QString id = QString::number(id_co);
-    query.prepare("insert into commande (id_co,datec,localisation,etatc,ville)" "values (:id_co, :datec,:localisation,:etatc,:ville)");
+    query.prepare("insert into commande (id_co,datec,localisation,etatc,id_c,ville)" "values (:id_co, :datec,:localisation,:etatc,:id_c,:ville)");
     query.bindValue(":id_co",id);
     query.bindValue(":datec",datec);
     query.bindValue(":localisation",localisation);
     query.bindValue(":etatc",etatc);
+    query.bindValue(":id_c",id_c);
     query.bindValue(":ville",ville);
     return query.exec();
 }
@@ -39,7 +40,7 @@ QSqlQueryModel * Commandes::afficher()
     model->setHeaderData(1,Qt::Horizontal,QObject::tr("Date commande"));
     model->setHeaderData(2,Qt::Horizontal,QObject::tr("Adresse"));
     model->setHeaderData(3,Qt::Horizontal,QObject::tr("Etat"));
-    model->setHeaderData(4,Qt::Horizontal,QObject::tr("Id du client"));
+    model->setHeaderData(4,Qt::Horizontal,QObject::tr("Id client"));
     model->setHeaderData(5,Qt::Horizontal,QObject::tr("Ville"));
     return  model;
 }
@@ -88,19 +89,19 @@ QSqlQueryModel * Commandes::StatsCommandes(int type){
     {
     model->setQuery("select id_c,(count(id_c)*100/ (select count(*)from commande)) as pourcentage from commande group by id_c");
     model->setHeaderData(0,Qt::Horizontal,QObject::tr("ID CLIENT"));
-    model->setHeaderData(1,Qt::Horizontal,QObject::tr("percentage"));
+    model->setHeaderData(1,Qt::Horizontal,QObject::tr("%"));
     }
     else if(type==2)
     {
     model->setQuery("select id_pr,(count(id_pr)*100/ (select count(*)from contenir)) as pourcentage from contenir group by id_pr");
     model->setHeaderData(0,Qt::Horizontal,QObject::tr("ID PRODUIT"));
-    model->setHeaderData(1,Qt::Horizontal,QObject::tr("percentage"));
+    model->setHeaderData(1,Qt::Horizontal,QObject::tr("%"));
     }
     else if(type==3)
     {
         model->setQuery("select ville,(count(ville)*100/ (select count(*)from commande)) as pourcentage from commande group by ville");
-        model->setHeaderData(0,Qt::Horizontal,QObject::tr("ID PRODUIT"));
-        model->setHeaderData(1,Qt::Horizontal,QObject::tr("percentage"));
+        model->setHeaderData(0,Qt::Horizontal,QObject::tr("VILLE"));
+        model->setHeaderData(1,Qt::Horizontal,QObject::tr("%"));
     }
     return model;
 }
@@ -152,4 +153,39 @@ else if (k==3)
     model->setHeaderData(5,Qt::Horizontal,QObject::tr("Ville"));
 }
         return model;
+}
+bool Commandes::ajoutecontenir(int id_c,int id_pr,int quantite,float prix)
+{
+    QSqlQuery query;
+    QString id = QString::number(id_pr);
+    QString id1 = QString::number(id_c);
+    //QString id2 = QString::number(quantite);
+    QString id3 = QString::number(prix);
+    query.prepare("insert into contenir (id_pr ,id_co ,quantite ,prix)" "values (:id_pr, :id_co, :quantite, :prix)");
+    query.bindValue(":id_pr",id);
+    query.bindValue(":id_co",id1);
+    query.bindValue(":quantite",quantite);
+    query.bindValue(":prix",id3);
+    return query.exec();
+}
+float Commandes::getPrice(int id_pr)
+{
+    QSqlQuery query;
+     QString id = QString::number(id_pr);
+    query.prepare("select * from produit where id_pr=:id_pr");
+    query.bindValue(":id_pr",id);
+    query.exec();
+    query.first();
+    return query.value(2).toFloat();
+}
+int Commandes::getCoupon(QString coupon)
+{
+     QSqlQuery query;
+     query.prepare("select * from coupon where code=:coupon");
+     query.bindValue(":coupon",coupon);
+     query.exec();
+     query.first();
+     if(query.value(0).toBool()==false)
+         return 0;
+     else return query.value(1).toInt();
 }

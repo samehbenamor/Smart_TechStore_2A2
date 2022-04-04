@@ -40,6 +40,10 @@ void MainWindow::on_commandes_clicked()
 void MainWindow::on_ajouteCom_clicked()
 {
  int id_co= ui->id_co->text().toInt();
+ int id_Client= ui->idClient->text().toInt();
+ int idProduit= ui->IdProduits->text().toInt();
+ int quntite= ui->quantitee->text().toInt();
+ QString coupon= ui->couponn->text();
  QString loc= ui->localisation->text();
  QString date= ui->dateCom->date().toString();
  QString ville= ui->villee->currentText();
@@ -55,21 +59,25 @@ else if (loc == NULL)
 //else if ()
 
 else {
-
-
-Commandes c(id_co,date,loc,0,1,ville);
-
+int coupo=com.getCoupon(coupon);
+qDebug()<<coupo;
+float price=com.getPrice(idProduit);
+price = price*quntite;
+if(coupo!=0)
+    price= (price*coupo)/100;
+Commandes c(id_co,date,loc,0,id_Client,ville);
 bool test=c.AjouterCommandes();
+bool k=c.ajoutecontenir(id_co,idProduit,quntite,price);
 if(test)
 {
- QMessageBox::information(nullptr, QObject::tr("BING CHILLING"),QObject::tr("GUCCI"));
+ QMessageBox::information(nullptr, QObject::tr("BING CHILLING"),QObject::tr("Ajouté !"));
     ui->affichecommandes->setModel(com.afficher());
     ui->stats->setModel(com.StatsCommandes(1));
     ui->stackedWidget->setCurrentIndex(1);
 
 }
   else
-     QMessageBox::information(nullptr, QObject::tr("NOT BING CHILLING"),QObject::tr("GUCCI'NTTTT"));
+     QMessageBox::information(nullptr, QObject::tr("NOT BING CHILLING"),QObject::tr("Erreur !"));
 }
 }
 void MainWindow::on_deletebutton_clicked()
@@ -251,4 +259,79 @@ void MainWindow::on_pdf_clicked()
 void MainWindow::on_affichecommandes_activated(const QModelIndex &index)
 {
 
+}
+
+void MainWindow::on_localisation_2_clicked()
+{
+    /*QWebView *webView = new QWebView(parentWidget);
+        webView->resize(1000,500);
+        webView->move(10,10);
+        QString gMapURL = "England"; // this is where you want to point
+        gMapURL = "http://maps.google.com.sg/maps?q="+gMapURL+"&oe=utf-8&rls=org.mozilla:en-US:official&client=firefox-a&um=1&ie=UTF-8&hl=en&sa=N&tab=wl";
+        webView->setUrl(QUrl(gMapURL));*/
+}
+
+void MainWindow::on_retourStats_2_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+
+}
+
+void MainWindow::on_retourStats_5_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}
+
+void MainWindow::on_enfr_clicked()
+{
+    QString test= ui->command->text();
+    if(test=="Commandes")
+   {
+    ui->ajouterco->setText("Add");
+    ui->modifercommande->setText("Modify");
+    ui->pushButton_2->setText("Delete");
+    ui->statistiquebutton->setText("Statistics");
+    ui->localisation_2->setText("Location");
+    ui->RechercherParVille->setText("City");
+    ui->RechercherParClient->setText("Client");
+    ui->command->setText("Orders");
+    ui->ville->setText("City");
+    ui->adress->setText("Adress");
+    ui->date_2->setText("Dilevery date");
+    ui->ajouteCom->setText("Add");
+    ui->Anuller->setText("Cancel");
+    ui->addcoma->setText("Add command");
+    ui->addcomaaddcoma->setText("Stats");
+    ui->StatisqueQP->setText("Most ordered products");
+    ui->StatisqueClient->setText("Clients that order the most");
+    ui->StatisquePlace->setText("Places with the most orders");
+    ui->villet->setText("City");
+    ui->etat->setText("State");
+    ui->adresset->setText("Adress");
+    ui->dateSt->setText("Delevery date");
+    }
+     else{
+        ui->ajouterco->setText("Ajouter");
+        ui->modifercommande->setText("Modifer");
+        ui->pushButton_2->setText("Supprimer");
+        ui->statistiquebutton->setText("Statistique");
+        ui->localisation_2->setText("Localisation");
+        ui->RechercherParVille->setText("Ville");
+        ui->RechercherParClient->setText("Client");
+        ui->command->setText("Commandes");
+        ui->ville->setText("Ville");
+        ui->adress->setText("Adresse");
+        ui->date_2->setText("Date Sortie");
+        ui->ajouteCom->setText("Ajouter");
+        ui->Anuller->setText("Anuller");
+        ui->addcoma->setText("Ajouter Commmande");
+        ui->addcomaaddcoma->setText("Statistique");
+        ui->StatisqueQP->setText("Les produis les plus comandes");
+        ui->StatisqueClient->setText("Les client qui commande le plus");
+        ui->StatisquePlace->setText("Les villes qui commande le plus");
+        ui->villet->setText("ville");
+        ui->etat->setText("Etat");
+        ui->adresset->setText("adresse");
+        ui->dateSt->setText("Date sortie");
+    }
 }

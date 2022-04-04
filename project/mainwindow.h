@@ -58,6 +58,14 @@ private slots:
 
     void on_affichecommandes_activated(const QModelIndex &index);
 
+    void on_localisation_2_clicked();
+
+    void on_retourStats_2_clicked();
+
+    void on_retourStats_5_clicked();
+
+    void on_enfr_clicked();
+
 private:
     Ui::MainWindow *ui;
     Commandes com;
