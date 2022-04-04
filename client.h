@@ -7,12 +7,12 @@ class client
 {
 
     QString nom, prenom, address;
-    int id_c;
+    int id_c, points_merci;
 
 public:
     //Constructeurs
         client() {}
-        client(int, QString, QString, QString);
+        client(int, QString, QString, QString, int);
 
     //Getters
         //Strings
@@ -22,7 +22,7 @@ public:
 
         //Int
         int getIdC(){return id_c;}
-
+        int getPM(){return points_merci;}
 
     //Setters
         //Strings
@@ -32,6 +32,7 @@ public:
 
         //Int
         void setIdC(int id){id_c = id;}
+        void setPM(int PM){points_merci = PM;}
 
 
         //Float
@@ -43,7 +44,15 @@ public:
         bool supprimerClient(int);
         QSqlQuery rechercherClient(int);
         bool modifierClient();
+        QSqlQuery NbClient(); //nombre clients
+         QSqlQueryModel * afficherLatestCl(); //derniere client ajouté
 
+         QSqlQueryModel * afficherRechercheCl(QString re); //aff tab de recherche
+
+
+
+        bool ajouterpm(int id, int pm); //
+        bool consommerpm(int id, int pm); //
 };
 
 #endif // PRODUIT_H
