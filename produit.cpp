@@ -5,6 +5,7 @@
     int id_pr, stock;*/
 produit::produit(int id_pr, QString nom_pr, int prix, QString qr_code, int stock, QString image, QString date_impo, QString description)
 {
+
     this->id_pr=id_pr;
     this->nom=nom_pr;
     this->prix=prix;
@@ -14,6 +15,7 @@ produit::produit(int id_pr, QString nom_pr, int prix, QString qr_code, int stock
     this->date_impo=date_impo;
     this->description=description;
 }
+
 bool produit::ajouterProduit()
 {
     QSqlQuery query;
@@ -39,16 +41,67 @@ QSqlQueryModel * produit::afficher()
 {
     QSqlQueryModel * model=new QSqlQueryModel();
     model->setQuery("select * from produit");
-    model->setHeaderData(0, Qt::Horizontal, QObject::tr("id_pr"));
-    model->setHeaderData(0, Qt::Horizontal, QObject::tr("nom"));
-    model->setHeaderData(0, Qt::Horizontal, QObject::tr("prix"));
-    model->setHeaderData(0, Qt::Horizontal, QObject::tr("qr_code"));
-    model->setHeaderData(0, Qt::Horizontal, QObject::tr("stock"));
-    model->setHeaderData(0, Qt::Horizontal, QObject::tr("image"));
-    model->setHeaderData(0, Qt::Horizontal, QObject::tr("date_impo"));
-    model->setHeaderData(0, Qt::Horizontal, QObject::tr("description"));
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("PRIX"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("QR CODE"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("STOCK"));
+    model->setHeaderData(5, Qt::Horizontal, QObject::tr("IMAGE"));
+    model->setHeaderData(6, Qt::Horizontal, QObject::tr("DI"));
+    model->setHeaderData(7, Qt::Horizontal, QObject::tr("DES"));
     return model;
 }
+
+/*QSqlQuery produit::LatestProduit() {
+    QSqlQuery query;
+    query.exec("SELECT * FROM produit WHERE ID_PR=(SELECT max(ID_PR) FROM produit);");
+    return query;
+}
+*/
+
+QSqlQueryModel * produit::afficherLatest() {
+    QSqlQueryModel * model=new QSqlQueryModel();
+    model->setQuery("SELECT * FROM produit WHERE ID_PR=(SELECT max(ID_PR) FROM produit);");
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("PRIX"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("QR CODE"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("STOCK"));
+    model->setHeaderData(5, Qt::Horizontal, QObject::tr("IMAGE"));
+    model->setHeaderData(6, Qt::Horizontal, QObject::tr("DI"));
+    model->setHeaderData(7, Qt::Horizontal, QObject::tr("DES"));
+    return model;
+}
+
+QSqlQueryModel * produit::afficherRecherche(QString re) {
+    QSqlQueryModel * model=new QSqlQueryModel();
+
+    //id_pr, nom, prix, qr_code, stock, image, date_impo, description
+
+    model->setQuery("SELECT * FROM produit WHERE NOM LIKE '"+re+"%' OR ID_PR LIKE '"+re+"%' OR PRIX LIKE '"+re+"%' OR STOCK LIKE '"+re+"%' OR DATE_IMPO LIKE '"+re+"%' OR DESCRIPTION LIKE '"+re+"%'");
+    // model->setQuery("SELECT * FROM reclamation WHERE numrec LIKE '"+recherche+"%' OR titre LIKE '"+recherche+"%' OR type LIKE '"+recherche+"%'");
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("PRIX"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("QR CODE"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("STOCK"));
+    model->setHeaderData(5, Qt::Horizontal, QObject::tr("IMAGE"));
+    model->setHeaderData(6, Qt::Horizontal, QObject::tr("DI"));
+    model->setHeaderData(7, Qt::Horizontal, QObject::tr("DES"));
+    return model;
+}
+
+
+QSqlQueryModel * produit::afficherRestock() {
+    QSqlQueryModel * model=new QSqlQueryModel();
+    model->setQuery("SELECT * FROM produit WHERE STOCK=0;");
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("PRIX"));
+    model->setHeaderData(7, Qt::Horizontal, QObject::tr("DES"));
+    return model;
+}
+
 bool produit::supprimerProduit(int id) {
     QSqlQuery query;
     QString id_conv = QString::number(id);
@@ -72,7 +125,7 @@ bool produit::modifierProduit(){
         QSqlQuery query;
 
 QString Id = QString::number(id_pr);
-query.prepare("UPDATE produit SET ID_PR=:id_pr,NOM=:nom_pr,PRIX=:prix,QR_CODE=:qr_code,STOCK=:stock,IMAGE=:image,DATE_IMPO:=date_impo,DESCRIPTION:=description WHERE id_pr=:id_pr");
+query.prepare("UPDATE PRODUIT SET NOM= :nom_pr,PRIX= :prix,QR_CODE= :qr_code,STOCK= :stock,IMAGE= :image,DATE_IMPO= :date_impo,DESCRIPTION=:description, ID_PR=:id_pr WHERE id_pr=:id_pr");
        query.bindValue(":id_pr",Id);
        query.bindValue(":nom_pr", nom);
        query.bindValue(":prix", prix);
@@ -83,4 +136,21 @@ query.prepare("UPDATE produit SET ID_PR=:id_pr,NOM=:nom_pr,PRIX=:prix,QR_CODE=:q
        query.bindValue(":description", description);
        return  query.exec();
 
+}
+bool produit::UpdateQrcodeLink(QString qr, QString id) {
+    QSqlQuery query;
+    query.prepare("UPDATE PRODUIT SET QR_CODE= :qrc where id_pr= :id_pr");
+    query.bindValue(":qrc", qr);
+    query.bindValue(":id_pr", id);
+    return query.exec();
+}
+QSqlQuery produit::NbProduit() {
+    QSqlQuery query;
+     query.exec("SELECT COUNT(*) FROM produit");
+     return query;
+    /*QSqlQuery query;
+    query.prepare("SELECT COUNT(*) from produit");
+    query.exec();
+    int i = query.size();
+    return i;*/
 }

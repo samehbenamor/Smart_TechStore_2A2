@@ -2,6 +2,14 @@
 #include <QApplication>
 #include <QMessageBox>
 #include "connection.h"
+
+
+#include <QtCharts/QChartView>
+#include <QtCharts/QBarSeries>
+#include <QtCharts/QBarSet>
+#include <QtCharts/QLegend>
+#include <QtCharts/QBarCategoryAxis>
+#include "qrcode.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -21,7 +29,9 @@ int main(int argc, char *argv[])
                     QObject::tr("connection failed.\n"
                                 "Click Cancel to exit."), QMessageBox::Cancel);
 
+    //
 
 
+    //
     return a.exec();
 }

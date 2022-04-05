@@ -3,7 +3,9 @@
 
 #include <QMainWindow>
 #include "produit.h"
+#include "qrcode.h"
 QT_BEGIN_NAMESPACE
+using namespace qrcodegen;
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
@@ -33,6 +35,24 @@ private slots:
     void on_modifier_btn_clicked();
 
     void on_supprimer_btn_clicked();
+
+    void on_ajouter1_btn_clicked();
+
+    void on_Statistiques_btn_clicked();
+
+    void on_ajouter_pro_4_clicked();
+
+    void on_ajouter_pro_3_clicked();
+
+    void on_Recherche_pr_clicked();
+
+    void on_yeah_clicked();
+
+    void on_en_clicked();
+
+    void on_fr_clicked();
+
+    void on_archiver_clicked();
 
 private:
     Ui::MainWindow *ui;

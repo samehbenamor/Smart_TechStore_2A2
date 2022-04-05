@@ -10,6 +10,7 @@ class produit
     int id_pr, stock, prix;
 
 public:
+
     //Constructeurs
         produit() {}
         produit(int, QString, int, QString, int, QString, QString,QString);
@@ -44,6 +45,11 @@ public:
         bool supprimerProduit(int);
         QSqlQuery rechercherProduit(int);
         bool modifierProduit();
+        QSqlQuery NbProduit();
+        QSqlQueryModel * afficherLatest();
+        QSqlQueryModel * afficherRestock();
+        QSqlQueryModel * afficherRecherche(QString re);
+        bool UpdateQrcodeLink(QString qr, QString id);
 };
 
 #endif // PRODUIT_H
