@@ -189,3 +189,20 @@ int Commandes::getCoupon(QString coupon)
          return 0;
      else return query.value(1).toInt();
 }
+QSqlQuery Commandes::Recherche2(QString type)
+{
+    QSqlQuery query;
+    query.prepare("select * from commande where ville=:ville");
+    query.bindValue(":ville",type);
+    query.exec();
+   return query;
+}
+QSqlQuery Commandes::RechercheEmp(int id)
+{
+    QSqlQuery query;
+QString Id = QString::number(id);
+    query.prepare("select * from employee where id_em=:id_em");
+    query.bindValue(":id_em",Id);
+    query.exec();
+    return   query;
+}

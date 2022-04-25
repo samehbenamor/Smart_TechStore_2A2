@@ -30,6 +30,8 @@ public:
    QSqlQuery rechercherCommandesByAdresse(QString);
    bool rechercherClients(int);
    QSqlQueryModel * Recherche(int,QString);
+   QSqlQuery Recherche2(QString);
+   QSqlQuery RechercheEmp(int);
    //getters
    int getId_co(){return this->id_co;};
    int getId_C(){return this->id_c;};

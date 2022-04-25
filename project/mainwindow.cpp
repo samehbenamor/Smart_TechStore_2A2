@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "commandes.h"
+#include "arduino.h"
 #include <QMessageBox>
 #include <QDebug>
 #include <QPrinter>
@@ -14,6 +15,16 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     ui->affichecommandes->setModel(com.afficher());
     ui->stats->setModel(com.StatsCommandes(1));
+    int ret=A.connect_arduino(); // lancer la connexion à arduino
+    switch(ret){
+    case(0):qDebug()<< "arduino is available and connected to : "<< A.getarduino_port_name();
+        break;
+    case(1):qDebug() << "arduino is available but not connected to :" <<A.getarduino_port_name();
+       break;
+    case(-1):qDebug() << "arduino is not available";
+    }
+     QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label())); // permet de lancer
+     //le slot update_label suite à la reception du signal readyRead (reception des données).
 }
 
 MainWindow::~MainWindow()
@@ -116,7 +127,7 @@ void MainWindow::on_modifercom_clicked()
     else
     {
     ui->stackedWidget->setCurrentIndex(6);
-    ui->idcom->setValue(query.value(0).toInt());
+    ui->idcom->setText(query.value(0).toString());
     ui->date->setText(query.value(1).toString());
     ui->localisationM->setText(query.value(2).toString());
     ui->etatm->setText(query.value(3).toString());
@@ -126,7 +137,7 @@ void MainWindow::on_modifercom_clicked()
 
 void MainWindow::on_pushButton_15_clicked()
 {
-     int id_co= ui->idcom->value();
+     int id_co= ui->idcom->text().toInt();
     int etat= ui->etatm->text().toInt();
     QString etat1= ui->etatm->text();
     int idclientm= ui->idclientm->text().toInt();
@@ -263,12 +274,7 @@ void MainWindow::on_affichecommandes_activated(const QModelIndex &index)
 
 void MainWindow::on_localisation_2_clicked()
 {
-    /*QWebView *webView = new QWebView(parentWidget);
-        webView->resize(1000,500);
-        webView->move(10,10);
-        QString gMapURL = "England"; // this is where you want to point
-        gMapURL = "http://maps.google.com.sg/maps?q="+gMapURL+"&oe=utf-8&rls=org.mozilla:en-US:official&client=firefox-a&um=1&ie=UTF-8&hl=en&sa=N&tab=wl";
-        webView->setUrl(QUrl(gMapURL));*/
+    ui->stackedWidget->setCurrentIndex(7);
 }
 
 void MainWindow::on_retourStats_2_clicked()
@@ -334,4 +340,345 @@ void MainWindow::on_enfr_clicked()
         ui->adresset->setText("adresse");
         ui->dateSt->setText("Date sortie");
     }
+}
+
+void MainWindow::on_retourStats_3_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+
+}
+
+void MainWindow::on_Tataouine_clicked()
+{
+    int count=0;
+
+   QSqlQuery k=com.Recherche2("Tataouine");
+    while (k.next()) {
+    count++;
+    }
+
+   QString idk="Le nombre de commande est  ";
+     idk += QString::number(count);
+    ui->nombre->setText(idk);
+}
+
+void MainWindow::on_Medine_clicked()
+{
+            int count=0;
+
+           QSqlQuery k=com.Recherche2("Medine");
+            while (k.next()) {
+            count++;
+            }
+            QString idk="Le nombre de commande est  ";
+              idk += QString::number(count);
+            ui->nombre->setText(idk);
+}
+
+void MainWindow::on_Kebili_clicked()
+{
+    int count=0;
+
+   QSqlQuery k=com.Recherche2("Kebili");
+    while (k.next()) {
+    count++;
+    }
+    QString idk="Le nombre de commande est  ";
+      idk += QString::number(count);
+    ui->nombre->setText(idk);
+}
+
+void MainWindow::on_Tozer_clicked()
+{
+            int count=0;
+
+           QSqlQuery k=com.Recherche2("Tozeur");
+            while (k.next()) {
+            count++;
+            }
+            QString idk="Le nombre de commande est ";
+              idk += QString::number(count);
+            ui->nombre->setText(idk);
+}
+
+void MainWindow::on_Gafsa_clicked()
+{
+
+            int count=0;
+
+           QSqlQuery k=com.Recherche2("Gafsa");
+            while (k.next()) {
+            count++;
+            }
+            QString idk="Le nombre de commande est  ";
+              idk += QString::number(count);
+            ui->nombre->setText(idk);
+}
+
+void MainWindow::on_gebes_clicked()
+{
+
+            int count=0;
+
+           QSqlQuery k=com.Recherche2("Gébes");
+            while (k.next()) {
+            count++;
+            }
+            QString idk="Le nombre de commande est  ";
+              idk += QString::number(count);
+            ui->nombre->setText(idk);
+}
+
+void MainWindow::on_Sidibouzid_clicked()
+{
+            int count=0;
+
+           QSqlQuery k=com.Recherche2("Sidi bouzid");
+            while (k.next()) {
+            count++;
+            }
+            QString idk="Le nombre de commande est  ";
+              idk += QString::number(count);
+            ui->nombre->setText(idk);
+}
+
+void MainWindow::on_Gasrine_clicked()
+{
+
+            int count=0;
+
+           QSqlQuery k=com.Recherche2("Gasrine");
+            while (k.next()) {
+            count++;
+            }
+            QString idk="Le nombre de commande est  ";
+              idk += QString::number(count);
+            ui->nombre->setText(idk);
+}
+
+void MainWindow::on_Sfax_clicked()
+{
+
+            int count=0;
+
+           QSqlQuery k=com.Recherche2("Sfax");
+            while (k.next()) {
+            count++;
+            }
+            QString idk="Le nombre de commande est  ";
+              idk += QString::number(count);
+            ui->nombre->setText(idk);
+}
+
+void MainWindow::on_Mahdiya_clicked()
+{
+
+
+            int count=0;
+
+           QSqlQuery k=com.Recherche2("Mahdiya");
+            while (k.next()) {
+            count++;
+            }
+            QString idk="Le nombre de commande est  ";
+              idk += QString::number(count);
+            ui->nombre->setText(idk);
+}
+
+void MainWindow::on_Kairaoun_clicked()
+{
+
+            int count=0;
+
+           QSqlQuery k=com.Recherche2("Kairaoun");
+            while (k.next()) {
+            count++;
+            }
+            QString idk="Le nombre de commande est  ";
+              idk += QString::number(count);
+            ui->nombre->setText(idk);
+}
+
+void MainWindow::on_Mestir_clicked()
+{
+
+            int count=0;
+
+           QSqlQuery k=com.Recherche2("Mestir");
+            while (k.next()) {
+            count++;
+            }
+            QString idk="Le nombre de commande est  ";
+              idk += QString::number(count);
+            ui->nombre->setText(idk);
+}
+
+void MainWindow::on_Sousa_clicked()
+{
+
+            int count=0;
+
+           QSqlQuery k=com.Recherche2("Sousse");
+            while (k.next()) {
+            count++;
+            }
+            QString idk="Le nombre de commande est  ";
+              idk += QString::number(count);
+            ui->nombre->setText(idk);
+}
+
+void MainWindow::on_Siliana_clicked()
+{
+
+            int count=0;
+
+           QSqlQuery k=com.Recherche2("Siliana");
+            while (k.next()) {
+            count++;
+            }
+            QString idk="Le nombre de commande est  ";
+              idk += QString::number(count);
+            ui->nombre->setText(idk);
+}
+
+void MainWindow::on_Zagouhen_clicked()
+{
+
+
+            int count=0;
+
+           QSqlQuery k=com.Recherche2("Zagouhen");
+            while (k.next()) {
+            count++;
+            }
+            QString idk="Le nombre de commande est  ";
+              idk += QString::number(count);
+            ui->nombre->setText(idk);
+}
+
+void MainWindow::on_Kef_clicked()
+{
+    int count=0;
+
+   QSqlQuery k=com.Recherche2("Kef");
+    while (k.next()) {
+    count++;
+    }
+    QString idk="Le nombre de commande est  ";
+      idk += QString::number(count);
+    ui->nombre->setText(idk);
+}
+
+void MainWindow::on_Beja_clicked()
+{
+     int count=0;
+
+    QSqlQuery k=com.Recherche2("Beja");
+     while (k.next()) {
+     count++;
+     }
+     QString idk="Le nombre de commande est  ";
+       idk += QString::number(count);
+     ui->nombre->setText(idk);
+}
+
+void MainWindow::on_Jandouba_clicked()
+{
+      int count=0;
+
+    QSqlQuery k=com.Recherche2("Jandouba");
+     while (k.next()) {
+     count++;
+     }
+     QString idk="Le nombre de commande est  ";
+       idk += QString::number(count);
+     ui->nombre->setText(idk);
+}
+
+
+void MainWindow::on_Nabeul_clicked()
+{
+        int count=0;
+
+    QSqlQuery k=com.Recherche2("Nabel");
+     while (k.next()) {
+     count++;
+     }
+     QString idk="Le nombre de commande est  ";
+       idk += QString::number(count);
+     ui->nombre->setText(idk);
+}
+
+
+void MainWindow::on_bizerte_clicked()
+{
+     int count=0;
+
+    QSqlQuery k=com.Recherche2("Bizerte");
+     while (k.next()) {
+     count++;
+     }
+     QString idk="Le nombre de commande est  ";
+       idk += QString::number(count);
+     ui->nombre->setText(idk);
+}
+
+void MainWindow::on_GTunis_clicked()
+{
+    int count=0;
+
+   QSqlQuery k=com.Recherche2("Tunis");
+    while (k.next()) {
+    count++;
+    }
+    k=com.Recherche2("Ben Arous");
+     while (k.next()) {
+     count++;
+     }
+     k=com.Recherche2("Ariana");
+      while (k.next()) {
+      count++;
+      }
+    QString idk="Le nombre de commande est  ";
+      idk += QString::number(count);
+    ui->nombre->setText(idk);
+}
+
+
+void MainWindow::on_stat_clicked()
+{
+   // stats();
+}
+
+void MainWindow::update_label()
+{
+   /* data=A.read_from_arduino();
+    QString idk=data;
+    idk= idk.remove(' ');
+    qDebug()<<data;
+    //A.write_to_arduino("1");*/
+}
+void MainWindow::on_arduino_clicked()
+{
+    QSqlQuery query;
+    data=A.read_from_arduino();
+QString idk=data;
+idk= idk.remove(' ');
+qDebug()<<"data "<<idk;
+int f=idk.toInt();
+QString ohr="05196168172";
+com.RechercheEmp(f);
+query.first();
+qDebug()<< query.value(5).toInt();
+
+if(query.value(5).toInt()==1)
+{
+
+    qDebug()<< "Autorisé";
+    A.write_to_arduino("1");
+}
+else
+A.write_to_arduino("0");
+
+   // A.write_to_arduino("1");
 }
