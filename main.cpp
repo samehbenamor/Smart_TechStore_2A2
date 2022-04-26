@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 
     Connection c;
-    bool test=c.createconnect(); //Etablir connection
+    bool test=c.createconnect();                                                                                            //Etablir connection
     MainWindow w;
     if(test)
     {w.show();

@@ -1,8 +1,11 @@
+
+
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
-#include <QMainWindow>
 #include "client.h"
+#include <QMainWindow>
+#include "arduino.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -47,9 +50,13 @@ private slots:
     void on_changelanguage_clicked();
 
     void on_changefr_clicked();
+    void update_label();
 
 private:
     Ui::MainWindow *ui;
     client cl;
+    QByteArray data; // variable contenant les données reçues
+
+            Arduino A; // objet temporaire
 };
 #endif // MAINWINDOW_H

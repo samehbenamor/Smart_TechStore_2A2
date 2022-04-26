@@ -10,13 +10,65 @@
 #include "exportexcel.h"
 #include <QFile>
 #include <QFileDialog>
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+#include "arduino.h"
+#include<QTimer>
+
+
+QTimer *timerSerial = new QTimer();
+QTimer *timer3 = new QTimer();//
+
+
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent),
+                                          ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     ui->tableView->setModel(cl.afficherClient());
+   // ui->tableview->setModel(cl.afficherclient(0));
+    int ret=A.connect_arduino(); // lancer la connexion à arduino
+        switch(ret){
+        case(0):qDebug()<< "arduino is available and connected to : "<< A.getarduino_port_name();
+            break;
+        case(1):qDebug() << "arduino is available but not connected to :" <<A.getarduino_port_name();
+           break;
+        case(-1):qDebug() << "arduino is not available";
+        }
+         QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label())); // permet de lancer
+         //le slot update_label suite à la reception du signal readyRead (reception des données).
+
+//         connect(timer3, SIGNAL(timeout()), this, SLOT(update_label()));
+//             timer3->start(1500);
+
+
 }
+void MainWindow::update_label()
+{
+     data="";
+while(A.getdata().size()<5)
+{
+     data=A.read_from_arduino();
+}
+qDebug() << data ;
+
+ // data=A.read_from_arduino();
+  int D=data.toInt();
+//qDebug() << D ;
+
+    if(A.chercherid_c(D)!="-1")
+{
+        QString nom=A.chercher(D);
+        qDebug() << nom ;
+        QByteArray x=nom.toUtf8();
+        qDebug() << x ;
+        A.write_to_arduino(x);
+    }
+    else
+A.write_to_arduino("0");
+data="";
+}
+////////////////////////// redeffffffffffffffffffffffffffff
+
+
+
 
 MainWindow::~MainWindow()
 {
@@ -310,7 +362,7 @@ void MainWindow::on_changelanguage_clicked()
     ui->les_id_2->setText("Add a client");
     ui->suppressionreparation->setText("Delete a client");
     ui->les_id_3->setText("Enter the client's ID to delete");
-    ui->supprimer_btn_2->setText("Delete the client");
+    ui->supprimer_btn_2->setText( "Delete the client");
     ui->modifier_text->setText("Modify a client");
     ui->entrer_id_txt->setText("Enter the client's ID to modify");
     ui->aller_modifier_client->setText("Modify client");
