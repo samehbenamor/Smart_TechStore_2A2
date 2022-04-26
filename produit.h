@@ -46,6 +46,7 @@ public:
         QSqlQuery rechercherProduit(int);
         bool modifierProduit();
         QSqlQuery NbProduit();
+        QSqlQuery NbProduit1000();
         QSqlQueryModel * afficherLatest();
         QSqlQueryModel * afficherRestock();
         QSqlQueryModel * afficherRecherche(QString re);

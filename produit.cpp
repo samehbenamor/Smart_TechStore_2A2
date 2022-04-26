@@ -1,4 +1,4 @@
-﻿#include "produit.h"
+#include "produit.h"
 //  produit(int, QString, float, QString, int, QString, QString, QString);
 /*QString nom_pr, qr_code, image, description, date_impo;
     float prix;
@@ -148,9 +148,9 @@ QSqlQuery produit::NbProduit() {
     QSqlQuery query;
      query.exec("SELECT COUNT(*) FROM produit");
      return query;
-    /*QSqlQuery query;
-    query.prepare("SELECT COUNT(*) from produit");
-    query.exec();
-    int i = query.size();
-    return i;*/
+}
+QSqlQuery produit::NbProduit1000() {
+    QSqlQuery query;
+     query.exec("SELECT COUNT(*) FROM produit where prix > 1000");
+     return query;
 }
